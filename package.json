@@ -84,5 +84,8 @@
     "storybook": "^7.2.2",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "styled-components": "^6.0.7"
   }
 }

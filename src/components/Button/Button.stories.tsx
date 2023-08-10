@@ -1,23 +1,58 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
+import React from "react";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-export default {
-  title: "ReactComponentLibrary/Button",
+const meta: Meta<typeof Button> = {
   component: Button,
-} as ComponentMeta<typeof Button>;
-
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const HelloWorld = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-HelloWorld.args = {
-  label: "Save",
 };
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  label: "Click me!",
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+/*
+ *👇 Render functions are a framework specific feature to allow you control on how the component renders.
+ * See https://storybook.js.org/docs/react/api/csf
+ * to learn how to use render functions.
+ */
+export const Default: Story = {
+  render: () => <Button>Default</Button>,
+};
+
+export const Outline: Story = {
+  render: () => <Button variant="outline" >Default</Button>,
+};
+
+export const Text: Story = {
+  render: () => <Button variant="text" >Default</Button>,
+};
+
+export const DisableShadow: Story = {
+  render: () => <Button disableShadow>Default</Button>,
+};
+
+export const Disabled: Story = {
+  render: () => <Button disabled>Disabled</Button>,
+};
+
+export const SizedButtons: Story = {
+  render: () => (
+    <div /* style={{ display: "flex", gap: 10 }} */>
+      <Button>default</Button>
+      <Button size="sm">small</Button>
+      <Button size="md">medium</Button>
+      <Button size="lg">large</Button>
+    </div>
+  ),
+};
+
+export const PrimaryButton: Story = {
+  render: () => <Button color="primary">primary</Button>,
+};
+
+export const SecondaryButton: Story = {
+  render: () => <Button color="secondary">secondary</Button>,
+};
+
+export const DangerButton: Story = {
+  render: () => <Button color="danger">danger</Button>,
 };
