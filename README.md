@@ -1,90 +1,92 @@
-# React component library template/boilerplate
+<!-- Please update value in the {}  -->
 
-Template and quick-starter to create your own modern React library includes awesome features and bandled using Rollup. 
+<h1 align="center">dev-challanges-ex-01</h1>
 
-*Note: At date of writing this (April 2023), since the [create-react-library](https://github.com/transitive-bullshit/create-react-library) tool is no longer actively maintained (https://github.com/transitive-bullshit/create-react-library#readme) then I thought about creating this boilerplate to help bootstrap a modern react library with some nice features*
+<div align="center">
+   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
 
-## Note
-*This repository created for:*
-1. Help to bootstrap your own react library with some nice features and 
-without bothering with configuration and saving time.
-2. Learning purposes (especially how to bundle complicated things with Rollup). 
+<div align="center">
+  <h3>
+    <a href="https://{your-demo-link.your-domain}">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://{your-url-to-the-solution}">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-## Intro
-- This boilerplate uses [Rollup](https://rollupjs.org/) as a bundler https://rollupjs.org/
+<!-- TABLE OF CONTENTS -->
 
-*As mentioned in [readme of create-react-library](https://github.com/transitive-bullshit/create-react-library#readme) there are some others tools(you can use it as a bundler) as an alternative to Rollup like [tsup](https://github.com/egoist/tsup), [tsdx](https://github.com/jaredpalmer/tsdx), or [microbundle](https://github.com/developit/microbundle).*
+## Table of Contents
 
-see also this artice https://transitivebullsh.it/javascript-dev-tools-in-2022#823feddaa1bb4edea19042852b0a5b54
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Features](#features)
+- [How to use](#how-to-use)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
+<!-- OVERVIEW -->
+
+## Overview
+
+![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+
+Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+
+- Where can I see your demo?
+- What was your experience?
+- What have you learned/improved?
+- Your wisdom? :)
+
+### Built With
+
+<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+
+- [React](https://reactjs.org/)
+- [Vue.js](https://vuejs.org/)
+- [Tailwind](https://tailwindcss.com/)
 
 ## Features
-- [Rollup](https://rollupjs.org/) for bundling
-- Bundles `commonjs` and `es` module formats
-- [Jest](https://facebook.github.io/jest/) & [React Testing Library](https://testing-library.com/)  : For testing our components
-- Support for [TypeScript](https://www.typescriptlang.org/)
-- Sourcemap creation
-- Support of CSS/SASS: For exporting components with style
-- [Storybook](https://storybook.js.org/): For testing our components within the library itself as we design them
-- Supports complicated peer-dependencies (example here is [Antd](https://ant.design/) so here the power of rollup-plugin-peer-deps-external we can use complicated peer dependency such Antd without having it bundled as a part of your module.)
-- Optimizing bundle size: [@rollup/plugin-terser](https://www.npmjs.com/package/@rollup/plugin-terser) A Rollup plugin to generate a minified bundle with terser.
-- Automatically externalize peerDependencies in a rollup bundle, thanks to [rollup-plugin-peer-deps-external](https://www.npmjs.com/package/rollup-plugin-peer-deps-external)
-- Eslint
-- Deploy Storybook to GitHub Pages
-## Getting started
 
-- Copy over the template by cloning this repository and install its dependencies:
+<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) was to build an application to complete the given user stories.
+
+## How To Use
+
+<!-- This is an example, please update according to your application -->
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-git clone https://github.com/MidoAhmed/rollup-react-library-starter.git
-cd rollup-react-library-starter
-npm install
-```
-### Development:
+# Clone this repository
+$ git clone https://github.com/your-user-name/your-project-name
 
-- Storybook:
-    - Storybook gives you an easy way to see and use your components while working on them in your library project, without having to build an unnecessary testing page just to display them.
+# Install dependencies
+$ npm install
 
-        ```bash
-        npm run storybook # runs the host Storybook application locally for quick and easy testing
-        ```
-Now, anytime you make a change to your library or the stories, the storybook will live-reload your local dev server so you can iterate on your component in real-time.
-
-- Rollup watch and build:
-
-    - for Local development run rollup to watch your src/ module and automatically recompile it into dist/ whenever you make changes.
-
-        ```bash
-        npm run dev # runs rollup with watch flag
-        ```
-
-### Scripts:
-- `npm run build` : builds the library to `dist`
-- `npm run dev`  : builds the library, then keeps rebuilding it whenever the source files change.
-- `npm test` : tests the library and show the coverage.
-- `npm run lint` : runs eslint.
-- `npm run storybook` : runs the host Storybook application locally for quick and easy testing
-- `npm run build-storybook` : builds a static HTML/JS bundle that can easily be hosted on a remote server, so all members of your team can try your components.
-- `npm run deploy-storybook` : build & deploy the storybook to GitHub Pages
-
-### Publishing to npm:
-publish to GitHub Packages registry:
-- you need to have this in your ~/.npmrc
-```bash
-registry=https://registry.npmjs.org/
-@YOUR_GITHUB_USERNAME:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=YOUR_AUTH_TOKEN
-```
-and run:
-```bash
-npm publish
+# Run the app
+$ npm start
 ```
 
+## Acknowledgements
 
+<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
-## Tutorials and inspirations used to create this boilerplate 
-- big thanks to this tuto and his author : https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe#adding-scss
+- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
+- [Node.js](https://nodejs.org/)
+- [Marked - a markdown parser](https://github.com/chjj/marked)
 
-## License
+## Contact
 
-[MIT](LICENSE).
+- Website [your-website.com](https://{your-web-site-link})
+- GitHub [@your-username](https://{github.com/your-usermame})
+- Twitter [@your-twitter](https://{twitter.com/your-username})
