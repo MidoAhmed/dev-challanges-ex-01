@@ -19,7 +19,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "predeploy-storybook": "npm run build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "esdoc": "esdoc"
   },
   "repository": {
     "type": "git",
@@ -66,6 +67,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "babel-jest": "^29.5.0",
+    "esdoc": "^1.1.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^5.0.0",
@@ -83,7 +85,8 @@
     "sass": "^1.61.0",
     "storybook": "^7.2.2",
     "tslib": "^2.5.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "typescript-plugin-styled-components": "^3.0.0"
   },
   "dependencies": {
     "styled-components": "^6.0.7"
